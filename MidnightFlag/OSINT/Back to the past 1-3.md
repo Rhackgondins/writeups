@@ -16,15 +16,15 @@ A quick google search allows me to find a Linkedin profile corresponding to this
 
 ![jacque-houzit-linkedin](images/jacque-houzit-linkedin.PNG)
 
-By inspecting this profile, I find in its coordinates the link of its Linkedin profile as well as its github profile.
+By inspecting this profile, I find in his coordinates the link of his Linkedin profile as well as his github profile.
 
 ![jacque-houzit-github](images/jacque-houzit-github.PNG)
 
-His github contains two folders: "Classes" and "Learning", going to learning we discover several subfolders and notably Hacking/Preparation in which is stored a Readme.md with a link to a pastebin.
+His github contains two repositories: "Classes" and "Learning", going to learning we discover several folders and notice Hacking/Preparation in which is stored a Readme.md with a link to a pastebin.
 
 ![jacque-houzit-github-readme](images/jacque-houzit-github-readme.PNG)
 
-This pastebin needs a password to unlock, I think to go on waybackmachine to check if this pastebin has always needed a password (title of the challenge also refers to it)
+This pastebin needs a password to unlock, I think to go on waybackmachine to check if this pastebin has always needed a password (title of the challenge also refers to it : back to the past)
 
 A save is available on february 6th, it contains a file with a password : "vKZLd3PbLG".
 

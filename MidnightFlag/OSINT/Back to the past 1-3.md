@@ -14,7 +14,7 @@ The first challenge of OSINT asks us to find information about a computer attack
 
 A quick google search allows me to find a Linkedin profile corresponding to this information.
 
-![jacque-houzit-linkedin](images\jacque-houzit-linkedin.PNG)
+![jacque-houzit-linkedin](images/jacque-houzit-linkedin.PNG)
 
 By inspecting this profile, I find in its coordinates the link of its Linkedin profile as well as its github profile.
 

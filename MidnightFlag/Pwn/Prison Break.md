@@ -22,7 +22,7 @@ Here is what we get by connecting to the server using nc:
 
 ![prison_server](images/prison_server.png)
 
-After writing anything, we get this message:
+After writing something, we get this message:
 
 ```
 Noiche : NOOOO !! You droped the wrong key ! :(

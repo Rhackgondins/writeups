@@ -18,17 +18,17 @@ A quick google search allows me to find a Linkedin profile corresponding to this
 
 By inspecting this profile, I find in its coordinates the link of its Linkedin profile as well as its github profile.
 
-![jacque-houzit-github](images\jacque-houzit-github.PNG)
+![jacque-houzit-github](images/jacque-houzit-github.PNG)
 
 His github contains two folders: "Classes" and "Learning", going to learning we discover several subfolders and notably Hacking/Preparation in which is stored a Readme.md with a link to a pastebin.
 
-![jacque-houzit-github-readme](images\jacque-houzit-github-readme.PNG)
+![jacque-houzit-github-readme](images/jacque-houzit-github-readme.PNG)
 
 This pastebin needs a password to unlock, I think to go on waybackmachine to check if this pastebin has always needed a password (title of the challenge also refers to it)
 
 A save is available on february 6th, it contains a file with a password : "vKZLd3PbLG".
 
-![jacque-houzit-wayback](images\jacque-houzit-wayback.PNG)
+![jacque-houzit-wayback](images/jacque-houzit-wayback.PNG)
 
 Going back to the pastebin, I use the password to unlock the content of the file:
 

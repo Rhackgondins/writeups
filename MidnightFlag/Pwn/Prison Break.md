@@ -60,17 +60,15 @@ There is a scanf and some comparisons just after:
 
 The different parts of the key are being checked here. We can reproduce the key by using the parameters in each cmp: `0x800`, `0xfffffe49`, `0xb3350000`, `0x0` and `0x1000`.
 
-We will fill the variable with A until we reach the start of the key and then write the actual key.
-
-Since the stack is little endian, we will need to reverse each byte in every part of the key in the final payload (e.g. `0xfffffe49` will be `0x49feffff`).
+We will fill the input with 'A' until we reach the start of the key and then write the actual key.   
+Since the stack is little endian, we will need to reverse each byte in every part of the key in the final payload (e.g. `0xfffffe49` will become `0x49feffff`).
 
 The payload can be done using Python:
 ```sh
 python -c "print 'A' * number_to_overflow + '\x00\x10\x00\x00' + '\x00\x00\x00\x00' + '\x00\x00\x35\xb3' + '\x49\xfe\xff\xff' + '\x00\x08\x00\x00'" | nc ctf.midnightflag.fr 9021
 ```
 
-By guessing, we find that we need to write 256 bytes to reach the key in memory.
-
+By guessing, we find that we need to write 256 bytes to reach the key in memory.   
 We can then replace `number_to_overflow` in our script by 256 and send it once again:
 
 ![prison_free](images/prison_free.png)

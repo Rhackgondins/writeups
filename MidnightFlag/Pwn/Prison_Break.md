@@ -1,6 +1,7 @@
 # Prison Break
 
 
+**Description:**
 
 ````
 [Noiche] : J'ai été envoyé au goulag l'année dernière à cause de mes challenges de PWN... Venez m'aider à sortir d'ici et je vous récompenserai :p
@@ -12,9 +13,11 @@ Format : MCTF{}
 Auteur : Noiche
 ````
 
-Files :
+**Files:**
 
 [Prison_Break](files/prison_break)
+
+<hr>
 
 The file given is non executable and is just given to reverse the code of the server. We cannot get the flag only by reversing the file.
 
@@ -22,7 +25,7 @@ Here is what we get by connecting to the server using nc:
 
 ![prison_server](images/prison_server.png)
 
-After writing anything, we get this message:
+After writing something, we get this message:
 
 ```
 Noiche : NOOOO !! You droped the wrong key ! :(
